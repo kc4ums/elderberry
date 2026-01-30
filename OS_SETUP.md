@@ -46,7 +46,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install Python libraries
-pip install gpiozero pyttsx3 Flask
+pip install gpiozero pyttsx3 Flask requests
 
 ```
 
@@ -57,20 +57,21 @@ pip install gpiozero pyttsx3 Flask
 Since the **elderberry** project requires high-clarity voice feedback, a USB speaker is the primary output.
 
 1. Plug in the USB speaker and identify the card number:
+
 ```bash
 aplay -l
 
 ```
 
-
 2. Set the USB speaker as the system default:
+
 ```bash
 sudo nano /etc/asound.conf
 
 ```
 
-
 3. Paste the following configuration (assuming the USB speaker is **Card 1**):
+
 ```text
 pcm.!default {
     type hw
@@ -83,8 +84,6 @@ ctl.!default {
 
 ```
 
-
-
 ---
 
 ## 🚀 4. Automatic Startup (systemd)
@@ -92,13 +91,14 @@ ctl.!default {
 To ensure the app launches immediately on power-up:
 
 1. Create the service file:
+
 ```bash
 sudo nano /etc/systemd/system/elderberry.service
 
 ```
 
-
 2. Paste the following configuration:
+
 ```ini
 [Unit]
 Description=elderberry accessibility remote
@@ -117,15 +117,13 @@ WantedBy=multi-user.target
 
 ```
 
-
 3. Enable and start the service:
+
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable elderberry.service
 
 ```
-
-
 
 ---
 
@@ -134,11 +132,11 @@ sudo systemctl enable elderberry.service
 This prevents SD card corruption when the user unplugs the device without a proper shutdown.
 
 1. Open the Pi configuration tool:
+
 ```bash
 sudo raspi-config
 
 ```
-
 
 2. Navigate to: `Performance Options` -> `Overlay File System`.
 3. Select **Yes** (Enable Overlay FS).
@@ -150,4 +148,7 @@ sudo raspi-config
 > `sudo mount -o remount,rw /`
 > After your changes, simply reboot to return to protected Read-Only mode.
 
+```
 
+
+```

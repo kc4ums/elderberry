@@ -3,6 +3,7 @@
 gpiozero
 pyttsx3
 Flask
+requests
 
 ```
 
