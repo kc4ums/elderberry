@@ -1,0 +1,37 @@
+{
+  "system_settings": {
+    "device_name": "elderberry-alpha",
+    "master_volume": 0.8
+  },
+  "voice_settings": {
+    "speed_wpm": 140,
+    "language": "en-us"
+  },
+  "hardware_mapping": {
+    "btn_up_gpio": 2,
+    "btn_down_gpio": 3,
+    "btn_status_gpio": 4
+  },
+  "channels": [
+    {
+      "id": 1,
+      "label": "BBC One",
+      "command": "1"
+    },
+    {
+      "id": 2,
+      "label": "BBC Two",
+      "command": "2"
+    },
+    {
+      "id": 3,
+      "label": "ITV",
+      "command": "3"
+    },
+    {
+      "id": 4,
+      "label": "Channel 4",
+      "command": "4"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+elderberry/
+├── venv/               # Virtual environment
+├── main.py             # The main loop (button listener)
+├── config.py           # Pin numbers and channel names
+├── voice_engine.py     # Handles the Text-to-Speech logic
+├── tv_control.py       # Logic for IR, Wi-Fi, or CEC commands
+└── sounds/             # Folder for any .wav feedback sounds

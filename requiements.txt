@@ -1,0 +1,17 @@
+
+```text
+gpiozero
+pyttsx3
+Flask
+
+```
+
+### 💡 Quick Tip for GitHub
+
+When you are ready to install these on the Raspberry Pi, make sure your virtual environment is active, then run:
+
+```bash
+pip install -r requirements.txt
+
+```
+
